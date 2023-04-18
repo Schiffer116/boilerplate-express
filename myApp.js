@@ -43,10 +43,12 @@ app.route('/name')
         let firstname = req.query.first;
         let lastname = req.query.last;
         res.json({ "name": `${firstname} ${lastname}` });
+    })
+    .post((req, res) => {
+        let firstname = req.body.first;
+        let lastname = req.body.last;
+        res.json({ "name": `${firstname} ${lastname}` });
     });
-    //.post((req, res) => {
-        //res.
-    //});
 
 
 
